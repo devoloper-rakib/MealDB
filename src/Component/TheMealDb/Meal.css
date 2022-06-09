@@ -3,6 +3,7 @@
 	background-color: rgba(0, 0, 0, 0.418);
 	justify-content: space-between;
 	padding: 10px 200px;
+	flex-wrap: wrap;
 }
 
 .leftLogo h2{
@@ -12,6 +13,7 @@
 	font-style: oblique;
 	text-shadow: 2px 4px 4px yellowgreen;
 	margin-top: 3px;
+	cursor: pointer;
 }
 
 #search{
@@ -32,18 +34,80 @@
 	line-height: 1.8;
 }
 
-.main_cart_main{
+.main_container{
 	padding: 10px 200px;
 	margin-top: 60px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 30px ;
+	text-align: center;
 }
 
-.main_cart_main img{
+.not_found{
+	font-size: 4.3rem;
+	text-align: center;
+	text-shadow: 2px 4px 4px gray;
+	font-style: oblique;
+}
+.cart h1{
+	margin-bottom: 25px;
+}
+.cart img{
 	width: 400px;
 	height: 400px;
 	object-fit: cover;
 	border-radius: 30px;
 	margin-bottom: 30px;
 	
+}
+
+@media only screen and (max-width:480px){
+	.leftLogo h2{
+		font-size: 1.7rem;
+		word-spacing: 0px;
+		margin-bottom: 20px;
+	}
+	
+	#search{
+		padding: 13px 14px;
+		margin-right:10px;
+		margin-top: 5px;
+	}
+	
+	
+	.rightSection form span{
+		font-size: 1.1rem ;
+		line-height: 1.8;
+	}
+	.main_header{
+		justify-content: center;
+		padding: 10px 20px;
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (max-width:980px){
+
+	.leftLogo h2{
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+	
+	#search{
+		padding: 13px 14px;
+		margin-right:10px;
+		margin-top: 5px;
+	}
+	
+	
+	.rightSection form span{
+		font-size: 1.1rem ;
+		line-height: 1.8;
+	}
+	.main_header{
+		justify-content: center;
+		padding: 10px 20px;
+		flex-wrap: wrap;
+	}
 }

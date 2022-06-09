@@ -1,14 +1,17 @@
 import React from 'react';
-
-const SingleMeal = (item) => {
-	const { strMealThumb, strMeal, idMeal } = item;
+import './Meal.css';
+const SingleMeal = (props) => {
+	const { strMealThumb, strMeal, idMeal } = props;
 
 	return (
-		<div key={idMeal} className='main_cart'>
-			<img src={strMealThumb} alt='' />
-			<h1>{strMeal}</h1>
-			<h1>is not working</h1>
-		</div>
+		<>
+			<div className='main_cart_main' key={idMeal}>
+				<div className='cart'>
+					<img src={strMealThumb} alt={strMeal} />
+					<h1>{strMeal}</h1>
+				</div>
+			</div>
+		</>
 	);
 };
 

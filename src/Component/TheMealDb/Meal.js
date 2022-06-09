@@ -54,6 +54,7 @@ export const Meal = () => {
 				<div className='rightSection'>
 					<form action='#'>
 						<input
+							value={search}
 							onChange={changeHandler}
 							type='text'
 							name='search'
@@ -66,16 +67,15 @@ export const Meal = () => {
 				</div>
 			</div>
 
-			{data.map((item) => (
-				// <SingleMeals key={item.idMeal} item={item} />
-
-				<div className='main_cart_main' key={item.idMeal}>
-					<div className='main_cart_div'>
-						<img src={item.strMealThumb} alt='' />
-						<h1>{item.strMeal}</h1>
-					</div>
-				</div>
-			))}
+			<div className='main_container'>
+				{data == null ? (
+					<h1 className='not_found'>No Food Found !!!</h1>
+				) : (
+					data.map((item) => {
+						return <SingleMeals {...item} />;
+					})
+				)}
+			</div>
 
 			{/* {meal.map((item) => {
 				return <SingleMeals item={item} />;

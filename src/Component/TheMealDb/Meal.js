@@ -1,19 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import {
-	AxiosProvider,
-	Request,
-	Get,
-	Delete,
-	Head,
-	Post,
-	Put,
-	Patch,
-	withAxios,
-} from 'react-axios';
+import Navbar from '../Route/Navbar';
 
 import './Meal.css';
-import SingleMeals from './SingleMeal';
+import AllMeal from './AllMeal';
 export const Meal = () => {
 	const [data, setData] = useState([]);
 	const [timer, setTimer] = useState(new Date());
@@ -67,12 +57,19 @@ export const Meal = () => {
 				</div>
 			</div>
 
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<Navbar />
+
 			<div className='main_container'>
 				{data == null ? (
 					<h1 className='not_found'>No Food Found !!!</h1>
 				) : (
 					data.map((item) => {
-						return <SingleMeals {...item} />;
+						return <AllMeal key={item.idMeal} {...item} />;
 					})
 				)}
 			</div>

@@ -1,0 +1,18 @@
+a{
+	margin: 3rem;
+	font-size: 2rem;
+}
+
+.active{
+	color: red;
+}
+
+.active:hover{
+	color: greenyellow;
+	text-decoration: none;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-around;
+}

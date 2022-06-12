@@ -42,16 +42,28 @@
 	flex-wrap: wrap;
 	gap: 30px ;
 	text-align: center;
+	transition: all .3s;
 }
-
+.main_cart_main{
+	transition: all .3s;
+}
+.main_cart_main:hover{
+	transform: scale(1.1);
+}
 .not_found{
 	font-size: 4.3rem;
 	text-align: center;
 	text-shadow: 2px 4px 4px gray;
 	font-style: oblique;
 }
-.cart h1{
+.cart a h1{
 	margin-bottom: 25px;
+	color: white;
+	transition: all .3s;
+}
+.cart a h1:hover{
+	text-decoration:overline;
+	color: gray;
 }
 .cart img{
 	width: 400px;
@@ -111,3 +123,34 @@
 		flex-wrap: wrap;
 	}
 }
+
+.single_meal img{
+	width: 40rem;
+	height: 30rem;
+	border-radius: 15px;
+	object-fit: cover;
+	margin-bottom: 2.3rem;
+}
+
+.single_meal{
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, p, ul , li{
+	margin: 1rem 0;
+  }
+
+.single_meal ul li{
+	font-size: 1.7rem;
+	word-spacing: 5px;
+}
+
+.single_meal p{
+	margin: 4rem;
+	font-size: 1.5rem;
+	word-spacing: 3px;
+	letter-spacing: 2px;
+}
+
